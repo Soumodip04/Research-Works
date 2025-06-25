@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+</head>
+<body>
+    <h1>Breast Cancer Detection</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload Image:</label>
+        <input type="file" id="file" name="file" required>
+        <label for="model">Choose Model:</label>
+        <select id="model" name="model">
+            <option value="resnet18">ResNet18</option>
+            <option value="resnet50">ResNet50</option>
+            <option value="vgg16">VGG16</option>
+            <option value="unet">UNet (Segmentation)</option>
+        </select>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Model:</strong> {{ model_name }}</p>
+    <p><strong>Result:</strong> {{ result }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}</p>
+
+    <h3>Uploaded Image</h3>
+    <img src="static\uploads\malignant (5).png" alt="Uploaded Image" style="max-width: 300px;">
+
+    {% if predicted_image_path %}
+        <h3>Predicted Image</h3>
+        <img src="{{ predicted_image_path }}" alt="Predicted Image" style="max-width: 300px;">
+    {% endif %}
+
+    {% if plot_path %}
+        <h3>Confidence Plot</h3>
+        <img src="static\plots\confidence_malignant (5).png.png" alt="Confidence Plot" style="max-width: 300px;">
+    {% endif %}
+
+    <br>
+    <a href="/">Go Back</a>
+</body>
+</html>
